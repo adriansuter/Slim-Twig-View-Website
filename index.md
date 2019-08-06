@@ -9,4 +9,4 @@
 
 This is the documentation for the Slim Twig-View Middleware.
 
-[Go to the documentation]({{site.baseurl}}/docs/v3)
+[Go to the documentation]({{ site.baseurl }}/docs/v3)

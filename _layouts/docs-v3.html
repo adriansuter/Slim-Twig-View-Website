@@ -23,7 +23,7 @@
                     <ul class="toc-links">
                         {% for item in section.items %}
                         {% capture itemUrl %}{{ item[0] | replace: '.md', '.html' }}{% unless item[0] contains ".md" %}/{% endunless %}{% endcapture %}
-                        <li><a href="{{ itemUrl }}">{{ item[1] }}</a></li>
+                        <li><a href="{{ site.baseurl }}{{ itemUrl }}">{{ item[1] }}</a></li>
                         {% endfor %}
                     </ul>
                     {% endfor %}
@@ -53,14 +53,14 @@
                         {% if itemUrl == page.url %}
                         {% if prevSection and prevItem %}
                         <li class="page-item">
-                            <a href="{{ prevItemUrl }}" class="page-link">« <small>{{ prevSection.title }}: </small> {{ prevItem[1] }}</a>
+                            <a href="{{ site.baseurl }}{{ prevItemUrl }}" class="page-link">« <small>{{ prevSection.title }}: </small> {{ prevItem[1] }}</a>
                         </li>
                         {% endif %}
                         {% endif %}
 
                         {% if prevItemUrl == page.url %}
                         <li class="page-item">
-                            <a href="{{ itemUrl }}" class="page-link"><small>{{ section.title }}: </small> {{ item[1] }} »</a>
+                            <a href="{{ site.baseurl }}{{ itemUrl }}" class="page-link"><small>{{ section.title }}: </small> {{ item[1] }} »</a>
                         </li>
                         {% endif %}
 
