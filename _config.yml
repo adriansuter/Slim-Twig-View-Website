@@ -1,1 +1,29 @@
-theme: jekyll-theme-cayman
+highlighter: rouge
+markdown: kramdown
+timezone: Europe/Zurich
+title: Slim Twig-View
+include: [.htaccess]
+exclude: [node_modules]
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+plugins:
+  - jekyll-sitemap
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      docs-v4:
+        - title: Get Started
+          items:
+            - [/docs/v3, Home]
+            - [/docs/v3/start/installation.md, Installation]
+
+  - scope:
+      path: "docs/v3"
+      type: "pages"
+    values:
+      layout: docs-v3

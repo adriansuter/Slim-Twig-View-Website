@@ -1,0 +1,15 @@
+{
+  "name": "slim-twig-view-website",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
+  },
+  "devDependencies": {
+    "grunt": "~1.0.4",
+    "grunt-contrib-sass": "~1.0.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-uglify-es": "^3.3.0"
+  }
+}
