@@ -12,16 +12,16 @@ kramdown:
 plugins:
   - jekyll-sitemap
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "pages"
     values:
-      docs-v4:
+      docs-v3:
         - title: Get Started
           items:
             - [/docs/v3, Home]
             - [/docs/v3/start/installation.md, Installation]
+            - [/docs/v3/start/configuration.md, Configuration]
 
   - scope:
       path: "docs/v3"

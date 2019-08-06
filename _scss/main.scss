@@ -1,6 +1,59 @@
-
+@import "variables";
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-.docs {
-  margin-top: 2em;
+.wrapper {
+  margin: 2rem auto;
+  max-width: 960px;
+}
+
+%brandonLight {
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+%brandonBold {
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+%latoLight {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+%latoBold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5 {
+  @extend %latoLight;
+}
+
+.site-header {
+  padding: 0 0 $baseline 0;
+}
+
+.site-title {
+  @extend %brandonLight;
+
+  color: $primary;
+  font-size: $baseline * 5;
+  letter-spacing: -3px;
+  line-height: $baseline * 5;
+  text-align: center;
+}
+
+.site-slogan {
+  color: #AAA;
+  font-size: 18px;
+  text-align: center;
+}
+
+.navbar-brand {
+  @extend %brandonLight;
 }
