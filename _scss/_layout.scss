@@ -1,0 +1,27 @@
+.bg-darker {
+  background-color: $primary-grey !important;
+}
+
+.navbar-brand {
+  @extend %brandonLight;
+
+  margin-top: - $navbar-padding-y;
+  margin-bottom: - $navbar-padding-y;
+  margin-left: - $navbar-padding-x;
+
+  padding: ($navbar-padding-y + $navbar-brand-padding-y) ($navbar-padding-x);
+}
+
+.navbar-dark .navbar-brand {
+  color: $primary;
+  background-color: $primary-light-grey;
+}
+
+.wrapper {
+  margin: 2rem auto;
+  max-width: 960px;
+
+  &.docs {
+    max-width: 85%;
+  }
+}

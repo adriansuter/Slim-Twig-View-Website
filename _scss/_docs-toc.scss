@@ -1,0 +1,43 @@
+//noinspection SassScssResolvedByNameOnly
+.toc-nav-toggle {
+  margin-bottom: 2em;
+
+
+  @include media-breakpoint-up(md) {
+    display: none !important;
+  }
+}
+
+//noinspection SassScssResolvedByNameOnly
+.toc-nav-collapse {
+  @include media-breakpoint-up(md) {
+    &.collapse:not(.show) {
+      display: inherit;
+    }
+  }
+}
+
+//noinspection SassScssResolvedByNameOnly
+.toc-title {
+  &.active {
+    border-left: 1px solid $primary;
+    margin-left: -10px;
+    padding-left: 10px;
+  }
+}
+
+//noinspection SassScssResolvedByNameOnly
+.toc-links {
+  list-style: none;
+  padding: 0;
+
+  a {
+    display: block;
+    padding: 2px 10px;
+
+    &:hover, &.active {
+      border-radius: 4px;
+      background: $gray-100;
+    }
+  }
+}
