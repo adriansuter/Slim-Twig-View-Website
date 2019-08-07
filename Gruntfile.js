@@ -30,6 +30,7 @@ module.exports = function(grunt) {
             'node_modules/jquery/dist/jquery.js',
             'node_modules/popper.js/dist/umd/popper.js',
             'node_modules/bootstrap/dist/js/bootstrap.js',
+            '_js/prism.js',
             '_js/setup.js',
           ],
         },

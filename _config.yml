@@ -5,12 +5,15 @@ title: Slim Twig-View
 include: [.htaccess]
 exclude: [node_modules]
 baseurl: /Slim-Twig-View-Website
+
 kramdown:
   input: GFM
   hard_wrap: false
   syntax_highlighter: rouge
+
 plugins:
   - jekyll-sitemap
+
 defaults:
   - scope:
       path: ""
