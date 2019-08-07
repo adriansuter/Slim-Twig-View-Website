@@ -31,15 +31,14 @@
             </div>
 
             <div class="col-md-8 docs-content">
-                <h1 class="page-header">{{ page.title }}</h1>
+                <h1 class="mb-4 pb-3 border-bottom">{{ page.title }}</h1>
 
-<!--                <div class="edit-panel" style="margin: 0 0 1em 0;">-->
-<!--                    <a href="{{ site.slim_website_repo }}{{page.path}}" target="_blank" class="btn btn-default btn-sm"><i class="fa fa-github"></i> Edit This Page</a>-->
-<!--                </div>-->
                 {{ content }}
 
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
+                <div class="d-flex border-top mt-5 pt-5 justify-content-between align-items-center">
+<!--                <nav aria-label="Docs Page Navigation">-->
+<!--                    <ul class="pagination justify-content-center">-->
+{% assign prevDone = false %}
                         {% for section in page.docs-v3 %}
                         {% assign isCurrentSection = false %}
                         {% for item in section.items %}
@@ -52,16 +51,28 @@
                         {% capture itemUrl %}{{ item[0] | replace: '.md', '.html' }}{% unless item[0] contains ".md" %}/{% endunless %}{% endcapture %}
                         {% if itemUrl == page.url %}
                         {% if prevSection and prevItem %}
-                        <li class="page-item">
-                            <a href="{{ site.baseurl }}{{ prevItemUrl }}" class="page-link">« <small>{{ prevSection.title }}: </small> {{ prevItem[1] }}</a>
-                        </li>
+<div>
+                                <a href="{{ site.baseurl }}{{ prevItemUrl }}" class="page-link d-flex align-items-center">
+                                    <span class="d-block pl-1 pr-3">←</span>
+                                    <span class="d-block"><small>{{ prevSection.title }}: </small><br>{{ prevItem[1] }}</span>
+                                </a>
+</div>
+{% assign prevDone = true %}
+<!--                        <li class="page-item">-->
+<!--                        </li>-->
                         {% endif %}
                         {% endif %}
 
                         {% if prevItemUrl == page.url %}
-                        <li class="page-item">
-                            <a href="{{ site.baseurl }}{{ itemUrl }}" class="page-link"><small>{{ section.title }}: </small> {{ item[1] }} »</a>
-                        </li>
+{% if prevDone == false %}<div>&nbsp;</div>{% endif %}
+<div>
+                                <a href="{{ site.baseurl }}{{ itemUrl }}" class="page-link d-flex align-items-center">
+                                    <span class="d-block"><small>{{ section.title }}: </small><br>{{ item[1] }}</span>
+                                    <span class="d-block pl-3 pr-1">→</span>
+                                </a>
+</div>
+<!--                        <li class="page-item">-->
+<!--                        </li>-->
                         {% endif %}
 
                         {% assign prevSection = section %}
@@ -69,8 +80,9 @@
                         {% assign prevItemUrl = itemUrl %}
                         {% endfor %}
                         {% endfor %}
-                    </ul>
-                </nav>
+                </div>
+<!--                    </ul>-->
+<!--                </nav>-->
             </div>
         </div>
     </div>
