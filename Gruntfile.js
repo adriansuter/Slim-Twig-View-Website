@@ -9,15 +9,11 @@ module.exports = function(grunt) {
         style: 'compressed',
       },
       main: {
-        files: [
-          {
-            expand: true,
-            cwd: '_scss',
-            src: 'main.scss',
-            dest: 'assets/styles',
-            ext: '.css',
-          },
-        ],
+        files: {
+          'assets/styles/main.css': [
+            '_scss/main.scss'
+          ]
+        },
       },
     }
     ,
