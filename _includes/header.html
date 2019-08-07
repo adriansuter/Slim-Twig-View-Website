@@ -13,15 +13,28 @@
     <meta property="og:description" content="{{ page.description }}"/>
     <meta property="og:type" content="website"/>
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/main.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="shortcut icon" href="{{ site.baseurl }}/assets/images/favicon.png"/>
     <script src="https://use.typekit.net/yjz4fyo.js"></script>
     <script>try {
-        Typekit.load();
+      Typekit.load();
     } catch (e) {
     }</script>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand navbar-dark bg-darker">
     <a class="navbar-brand" href="{{ site.baseurl }}/">Twig-View</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavigation"
+            aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavigation">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item{% if page.url contains '/docs' %} active{% endif %}">
+                <a class="nav-link" href="/docs/v3">User Guide{% if page.url contains '/docs' %} <span class="sr-only">(current)</span>{% endif %}</a>
+            </li>
+        </ul>
+    </div>
 </nav>

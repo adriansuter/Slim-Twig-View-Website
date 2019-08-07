@@ -9,7 +9,7 @@
   "devDependencies": {
     "grunt": "~1.0.4",
     "grunt-contrib-sass": "~1.0.0",
-    "grunt-contrib-cssmin": "^3.0.0",
-    "grunt-contrib-uglify-es": "^3.3.0"
+    "grunt-contrib-cssmin": "~3.0.0",
+    "grunt-terser": "~0.1.0"
   }
 }

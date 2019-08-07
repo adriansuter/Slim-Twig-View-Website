@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         sourceMap: false,
         style: 'compressed',
       },
-      production: {
+      main: {
         files: [
           {
             expand: true,
@@ -21,19 +21,16 @@ module.exports = function(grunt) {
       },
     }
     ,
-    // Minify scripts
-    uglify: {
-      production: {
-        options: {
-          compress: {},
-          preserveComments: false,
-          drop_console: true,
-        },
+    // Minify JavaScript
+    terser: {
+      options: {},
+      main: {
         files: {
           'assets/scripts/main.js': [
             'node_modules/jquery/dist/jquery.js',
-            'node_modules/popper.js/dist/popper.js',
+            'node_modules/popper.js/dist/umd/popper.js',
             'node_modules/bootstrap/dist/js/bootstrap.js',
+            '_js/setup.js',
           ],
         },
       },
@@ -42,8 +39,8 @@ module.exports = function(grunt) {
 
   // Load plugins
   grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-uglify-es');
+  grunt.loadNpmTasks('grunt-terser');
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify', 'sass']);
+  grunt.registerTask('default', ['terser', 'sass']);
 };

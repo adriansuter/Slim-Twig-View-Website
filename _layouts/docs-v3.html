@@ -4,13 +4,13 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
-<!--                <div class="toc-nav-toggle">-->
-<!--                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#tocNav"-->
-<!--                            aria-expanded="false" aria-controls="tocNav">-->
-<!--                        Toggle Navigation-->
-<!--                    </button>-->
-<!--                </div>-->
-<!--                <div class="collapse toc-nav-collapse" id="tocNav">-->
+                <div class="toc-nav-toggle">
+                    <button class="btn btn-outline-primary btn-sm" type="button" data-toggle="collapse"
+                            data-target="#tocNav" aria-expanded="false" aria-controls="tocNav">
+                        Toggle Navigation
+                    </button>
+                </div>
+                <div class="collapse toc-nav-collapse" id="tocNav">
                     {% for section in page.docs-v3 %}
                     {% assign isCurrentSection = false %}
                     {% for item in section.items %}
@@ -27,7 +27,7 @@
                         {% endfor %}
                     </ul>
                     {% endfor %}
-<!--                </div>-->
+                </div>
             </div>
 
             <div class="col-md-8 docs-content">
