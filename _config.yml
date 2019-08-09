@@ -3,7 +3,7 @@ markdown: kramdown
 timezone: Europe/Zurich
 title: Slim Twig-View
 include: [.htaccess]
-exclude: [_includes, _js, _layouts, _scss, node_modules, Gemfile, Gemfile.lock, Gruntfile.js, LICENSE, package.json, package-lock.json, README.md]
+exclude: [.idea, _includes, _js, _layouts, _scss, node_modules, Gemfile, Gemfile.lock, Gruntfile.js, LICENSE, package.json, package-lock.json, README.md]
 baseurl: /Slim-Twig-View-Website
 
 kramdown:
