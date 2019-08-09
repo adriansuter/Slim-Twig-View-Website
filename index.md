@@ -22,6 +22,7 @@ Slim routing.
 
 ## Hello World
 
+{% raw %}
 ```php
 <?php
 use DI\Container;
@@ -68,3 +69,4 @@ $app->get('/hi/{name}', function ($request, $response, $args) {
 // Run app
 $app->run();
 ```
+{% endraw %}
