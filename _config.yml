@@ -25,9 +25,12 @@ defaults:
             - [/docs/v3, Home]
             - [/docs/v3/start/installation.md, Installation]
             - [/docs/v3/start/configuration.md, Configuration]
-        - title: Performance
+        - title: Without Container
           items:
-            - [/docs/v3/performance/lazy-twig-middleare.md, Lazy Twig Middleware]
+            - [/docs/v3/without-container/hello-world.md, Hello World]
+        - title: With Container
+          items:
+            - [/docs/v3/with-container/hello-world.md, Hello World]
 
   - scope:
       path: "docs/v3"

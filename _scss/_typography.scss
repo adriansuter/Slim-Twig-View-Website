@@ -1,3 +1,13 @@
 h1, h2, h3, h4, h5 {
   @extend %latoLight;
 }
+
+.docs {
+  h2 {
+    margin-top: 3rem;
+  }
+
+  h3 {
+    margin-top: 2rem;
+  }
+}
